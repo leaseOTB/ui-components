@@ -1,4 +1,4 @@
-# LeaseOTB ui-components
+# @leaseOTB/ui-components
 
 Opinionated Storybook using the following stack:
 
