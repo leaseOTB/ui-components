@@ -9,7 +9,9 @@ Opinionated Storybook using the following stack:
 - Material UI
 - Styled Components
 
-This repository uses automatic semantic release using Github Actions.  All commits and PRs to master are packaged into public NPM package located here (TBD)
+This repository uses automatic semantic release using Github Actions.  All commits and PRs to master are packaged into public NPM package located here 
+
+https://www.npmjs.com/package/@leaseotb/ui-components
 
 #
 ## Development
