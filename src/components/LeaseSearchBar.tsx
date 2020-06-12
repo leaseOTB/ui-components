@@ -3,9 +3,7 @@ import {TextField} from '@material-ui/core'
 
 export const LeaseSearchBar = () => {
   return (
-    <div>
       <TextField id="standard-basic" label='Search'>
       </TextField>
-    </div>
   )
 }

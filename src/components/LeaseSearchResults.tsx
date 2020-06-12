@@ -8,7 +8,6 @@ type SearchProps = {
 
 const LeaseSearchResults: FunctionComponent<SearchProps> = ({data}) => {
   return (
-    <div>
       <TableContainer>
         <TableHead>
           <TableRow>
@@ -33,7 +32,6 @@ const LeaseSearchResults: FunctionComponent<SearchProps> = ({data}) => {
           ))}
         </TableBody>
       </TableContainer>
-    </div>
   )
 }
 
