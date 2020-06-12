@@ -2,34 +2,25 @@ import path from "path";
 import babel from "rollup-plugin-babel";
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from 'rollup-plugin-commonjs';
+import typescript from 'rollup-plugin-typescript2';
+import pkg from './package.json'
 
 const rootDir = path.resolve(__dirname);
-const dstDir = path.join(rootDir, "dist");
 
-const extensions = [".ts", ".js", ".tsx"]
 
 export default {
-  input: "./src/index.ts",
-  output: {
-    dir: dstDir,
-    format: "cjs",
-    name: "Xrm.Test"
-  },
+  input: 'src/index.ts',
+  output: [
+    {
+      file: pkg.main,
+      format: 'cjs',
+      exports: 'named',
+      sourcemap: true,
+      strict: false
+    }
+  ],
   plugins: [
-    resolve({
-      jsnext: true,
-      extensions,
-    }),
-    babel({
-      extensions,
-      exclude: 'node_modules/**'
-    }),
-    commonjs({
-      namedExports: {
-        'react': ['isValidElementType', 'isValidElement', 'Children', 'cloneElement'],
-        'react-js': ['isValidElementType', 'isValidElement', 'Children', 'cloneElement'],
-        'react-is': ['ForwardRef', 'Memo', 'isFragment']
-      },
-    }),
-  ]
-};
+    typescript({ objectHashIgnoreUnknownHack: true })
+  ],
+  external: ['react', 'react-dom']
+}

@@ -6,7 +6,7 @@ type SearchProps = {
   data: Array<Object>
 }
 
-const LeaseSearchResults: FunctionComponent<SearchProps> = ({data}) => {
+export const LeaseSearchResults: FunctionComponent<SearchProps> = ({data}) => {
   return (
       <TableContainer>
         <TableHead>
@@ -36,4 +36,3 @@ const LeaseSearchResults: FunctionComponent<SearchProps> = ({data}) => {
 }
 
 // ; is necessary at the end of export default for components using propTypes
-export default LeaseSearchResults;
