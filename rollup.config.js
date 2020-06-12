@@ -21,7 +21,8 @@ export default {
       extensions,
     }),
     babel({
-      extensions
+      extensions,
+      exclude: 'node_modules/**'
     }),
     commonjs({
       namedExports: {
