@@ -1,8 +1,5 @@
-import styled from 'styled-components'
-import React, { FunctionComponent, useEffect } from 'react'
-import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper} from '@material-ui/core'
-
-import PropTypes, { InferProps } from "prop-types"
+import React, { FunctionComponent } from 'react'
+import {TableBody, TableCell, TableContainer, TableHead, TableRow} from '@material-ui/core'
 
 
 type SearchProps = {
