@@ -2,53 +2,17 @@ import typescript from "rollup-plugin-typescript2";
 import commonjs from "rollup-plugin-commonjs";
 import external from "rollup-plugin-peer-deps-external";
 import resolve from "rollup-plugin-node-resolve";
+import babel from 'rollup-plugin-babel'
+
 
 import pkg from "./package.json";
 
 export default {
-  input: "src/index.ts",
+  input: 'src/index.ts',
+  plugins: [typescript()],
+  external,
   output: [
-    {
-      file: pkg.main,
-      format: "cjs",
-      exports: "named",
-      sourcemap: true
-    },
-    {
-      file: pkg.module,
-      format: "es",
-      exports: "named",
-      sourcemap: true
-    }
-  ],
-  plugins: [
-    external(),
-    resolve(),
-    typescript({
-      rollupCommonJSResolveHack: true,
-      exclude: "**/__tests__/**",
-      clean: true
-    }),
-    commonjs({
-      include: ["node_modules/**"],
-      namedExports: {
-        'node_modules/react/index.js': [
-          'cloneElement',
-          'createContext',
-          'Component',
-          'createElement',
-          'isValidElement',
-          'Children'
-        ],
-        'node_modules/react-dom/index.js': ['render', 'hydrate'],
-        'node_modules/react-is/index.js': [
-          'isElement',
-          'isValidElementType',
-          'ForwardRef',
-          'Memo',
-          'isFragment'
-        ]
-      }
-    })
+    { format: 'cjs', file: pkg.main },
+    { format: 'esm', file: pkg.module }
   ]
 };
