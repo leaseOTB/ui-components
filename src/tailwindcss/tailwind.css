@@ -1,0 +1,22 @@
+@tailwind base;
+
+@tailwind components;
+
+/*This is fine don't worry about it*/
+.btn {
+  @apply font-semibold py-2 px-4 rounded outline-none bg-white;
+}
+
+.btn:hover {
+  @apply bg-gray-400;
+}
+
+.title {
+  @apply font-bold text-gray-800;
+}
+
+.description {
+  @apply text-gray-600;
+}
+
+@tailwind utilities;
