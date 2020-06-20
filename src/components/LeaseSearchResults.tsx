@@ -1,8 +1,17 @@
 import React, { FunctionComponent } from "react";
 import "../tailwindcss/App.css";
 
+type ListObj = {
+  image: string;
+  address: string;
+  contract: string;
+  BIN: Number;
+  rent: Number;
+  bedRooms: Number;
+}
+
 type SearchProps = {
-  data: Array<Object>;
+  data: Array<ListObj>;
 };
 
 const LeaseSearchResults: FunctionComponent<SearchProps> = ({ data }) => {
@@ -20,7 +29,7 @@ const LeaseSearchResults: FunctionComponent<SearchProps> = ({ data }) => {
           <div className="flex my-4 bg-gray-100 px-4 py-4 justify-between">
             <img
               src={item.image}
-              alt=""
+              alt={item.address}
               className="w-32 h-32 object-cover rounded"
             />
             <div className="bg-white flex justify-between w-full mx-4 py-6 px-4 rounded">
