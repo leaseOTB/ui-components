@@ -12,6 +12,7 @@
     "@babel/preset-react": "^7.10.1",
     "@babel/preset-typescript": "^7.10.1",
     "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -32,6 +33,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-postcss": "^3.1.2",
     "rollup-plugin-typescript2": "^0.27.1",
     "styled-components": "^5.1.1",
     "tailwindcss": "^1.4.6",
@@ -44,7 +46,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "build:css": "npx tailwindcss build ./src/tailwindcss/tailwind.css -o ./src/tailwindcss/App.css"
+    "build-css": "npx tailwindcss build ./src/tailwindcss/tailwind.css -o ./src/tailwindcss/App.css"
   },
   "eslintConfig": {
     "extends": "react-app"

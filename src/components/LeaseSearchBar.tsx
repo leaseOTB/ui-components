@@ -1,5 +1,4 @@
 import React from "react";
-import { ReactComponent as Search } from "../assets/search.svg";
 
 import {
   TextField,
@@ -9,6 +8,8 @@ import {
   FormLabel,
   Grid,
 } from "@material-ui/core";
+
+import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles({
   bed: {
@@ -64,7 +65,7 @@ export const LeaseSearchBar = () => {
                 }}
               >
                 <span>
-                  <Search width="36px" height="36px" />
+                  <SearchIcon />
                 </span>
               </button>
             </Grid>
