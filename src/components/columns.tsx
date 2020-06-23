@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
   listItem: {
     maxHeight: '20px',
-    '&:hover': { color: 'blue', cursor: 'pointer', maxHeight: '20px' },
+    '&:hover': { cursor: 'pointer', maxHeight: '20px' },
   },
 });
 
