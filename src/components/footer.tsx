@@ -10,7 +10,6 @@ import {
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import { findByLabelText } from '@testing-library/react';
 
 const useStyles = makeStyles({
   footer: {
@@ -51,21 +50,17 @@ const useStyles = makeStyles({
   },
 });
 
-export const Footer = () => {
+export const Footer = (props) => {
   const classes = useStyles();
-
   return (
     <footer className={classes.footer}>
       <div className={classes.main}>
         <List className={classes.sitemap}>
-          <Column
-            title='Columns'
-            item='Item'
-            link='https://leaseontheblock.care'
-          />
-          <Column title='Columns' item='Item' link='https://google.com' />
-          <Column title='Columns' item='Item' link='https://google.com' />
-          <Column title='Columns' item='Item' link='https://google.com' />
+          {props.props.map((data) => {
+            return (
+              <Column title={data.title} item={data.item} link={data.link} />
+            );
+          })}
           <div className={classes.bottomFooter}>
             <Typography variant='body2' color='primary'>
               © {new Date().getFullYear()} Lease on the Block

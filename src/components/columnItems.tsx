@@ -1,6 +1,5 @@
 import React from 'react';
-import { Items } from './columnItems';
-import { List, makeStyles, ListItemText, Typography } from '@material-ui/core';
+import { makeStyles, ListItemText } from '@material-ui/core';
 
 const useStyles = makeStyles({
   column: {
@@ -21,14 +20,19 @@ const useStyles = makeStyles({
   },
 });
 
-export const Column = (props) => {
+export const Items = (props) => {
   const classes = useStyles();
-  return (
-    <List className={classes.column}>
-      <Typography variant='h6' className={classes.columnTitle}>
-        {props.title}
-      </Typography>
-      <Items item={props.item} link={props.link} />
-    </List>
-  );
+  console.log(props);
+  for (let i = 0; i < props.item.length; i++) {
+    let items = props.item[i];
+    let links = props.link[i];
+    console.log(items, links);
+    return (
+      <ListItemText className={classes.listItem}>
+        <a href={items} rel='noreferrer noopener' target='_blank'>
+          {items}
+        </a>
+      </ListItemText>
+    );
+  }
 };
