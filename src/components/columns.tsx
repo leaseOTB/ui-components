@@ -1,5 +1,5 @@
 import React from 'react';
-import { Items } from './columnItems';
+import { ItemData } from './columnItems';
 import { List, makeStyles, ListItemText, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
@@ -28,7 +28,7 @@ export const Column = (props) => {
       <Typography variant='h6' className={classes.columnTitle}>
         {props.title}
       </Typography>
-      <Items item={props.item} link={props.link} />
+      <ItemData item={props.item} link={props.link} />
     </List>
   );
 };
