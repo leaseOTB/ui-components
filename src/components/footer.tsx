@@ -50,16 +50,14 @@ const useStyles = makeStyles({
   },
 });
 
-export const Footer = (props) => {
+export const Footer = (props: any) => {
   const classes = useStyles();
   return (
     <footer className={classes.footer}>
       <div className={classes.main}>
         <List className={classes.sitemap}>
           {props.props.map((data) => {
-            return (
-              <Column title={data.title} item={data.item} link={data.link} />
-            );
+            return <Column title={data.title} items={data.items} />;
           })}
           <div className={classes.bottomFooter}>
             <Typography variant='body2' color='primary'>

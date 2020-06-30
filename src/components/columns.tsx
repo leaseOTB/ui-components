@@ -1,6 +1,6 @@
 import React from 'react';
 import { ItemData } from './columnItems';
-import { List, makeStyles, ListItemText, Typography } from '@material-ui/core';
+import { List, makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   column: {
@@ -21,14 +21,14 @@ const useStyles = makeStyles({
   },
 });
 
-export const Column = (props) => {
+export const Column = (props: any) => {
   const classes = useStyles();
   return (
     <List className={classes.column}>
       <Typography variant='h6' className={classes.columnTitle}>
         {props.title}
       </Typography>
-      <ItemData item={props.item} link={props.link} />
+      <ItemData items={props.items} />
     </List>
   );
 };

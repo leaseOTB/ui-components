@@ -10,23 +10,25 @@ export default {
 const mockData = [
   {
     title: 'Column 1',
-    item: ['item 1', 'item 2'],
-    link: ['https://leaseontheblock.care', 'https://google.com'],
+    items: [
+      { item: 'item 1', link: 'https://leaseontheblock.care' },
+      { item: 'item 2', link: 'https://google.com' },
+    ],
   },
   {
     title: 'Column 2',
-    item: ['item 1', 'item 2'],
-    link: ['https://leaseontheblock.care', 'https://google.com'],
+    items: [
+      { item: 'item 1', link: 'https://leaseontheblock.care' },
+      { item: 'item 2', link: 'https://google.com' },
+    ],
   },
   {
     title: 'Column 3',
-    item: 'item 1',
-    link: 'https://leaseontheblock.care',
+    items: [{ item: 'item 1', link: 'https://leaseontheblock.care' }],
   },
   {
     title: 'Column 4',
-    item: 'item 1',
-    link: 'https://leaseontheblock.care',
+    items: [{ item: 'item 1', link: 'https://leaseontheblock.care' }],
   },
 ];
 

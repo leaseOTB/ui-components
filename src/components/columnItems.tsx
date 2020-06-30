@@ -20,31 +20,19 @@ const useStyles = makeStyles({
   },
 });
 
-export const ItemData = (props) => {
+export const ItemData = (props: any) => {
   const classes = useStyles();
-  console.log(props);
-  for (let i = 0; i < props.item.length; i++) {
-    let items = props.item[i];
-    let links = props.link[i];
-    console.log(items, links);
-    if (items.length > 1) {
-      console.log('option 1');
-      return (
-        <ListItemText className={classes.listItem}>
-          <a href={props.link[i]} rel='noreferrer noopener' target='_blank'>
-            {props.item[i]}
-          </a>
-        </ListItemText>
-      );
-    } else {
-      console.log('option 2');
-      return (
-        <ListItemText className={classes.listItem}>
-          <a href={props.link} rel='noreferrer noopener' target='_blank'>
-            {props.item}
-          </a>
-        </ListItemText>
-      );
-    }
-  }
+  return (
+    <>
+      {props.items.map((data: any) => {
+        return (
+          <ListItemText className={classes.listItem}>
+            <a href={data.link} rel='noreferrer noopener' target='_blank'>
+              {data.item}
+            </a>
+          </ListItemText>
+        );
+      })}
+    </>
+  );
 };
