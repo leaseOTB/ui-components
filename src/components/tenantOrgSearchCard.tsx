@@ -1,12 +1,13 @@
 import React from 'react';
 import {
-  Grid,
+  // Grid,
   makeStyles,
   Card,
   CardHeader,
   CardMedia,
   CardContent,
   Typography,
+  CardActionArea,
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,8 +27,9 @@ const useStyles = makeStyles((theme) => ({
 export const TenantOrgCard = (props: any) => {
   const classes = useStyles();
   return (
-    <Grid item xs={12} sm={6} md={4}>
-      <Card>
+    // <Grid item xs={12} sm={6} md={4}>
+    <Card>
+      <CardActionArea>
         <CardMedia
           className={classes.media}
           image={props.props.image}
@@ -42,7 +44,8 @@ export const TenantOrgCard = (props: any) => {
             {props.props.description}
           </Typography>
         </CardContent>
-      </Card>
-    </Grid>
+      </CardActionArea>
+    </Card>
+    // </Grid>
   );
 };
