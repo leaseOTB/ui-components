@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
 
 export const TenantOrgCard = (props: any) => {
   const classes = useStyles();
-  console.log(props);
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card>
@@ -40,7 +39,7 @@ export const TenantOrgCard = (props: any) => {
         />
         <CardContent className={classes.text}>
           <Typography gutterBottom variant='h5' component='h2'>
-            Lizard
+            {props.props.description}
           </Typography>
         </CardContent>
       </Card>

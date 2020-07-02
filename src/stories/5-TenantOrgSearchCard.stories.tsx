@@ -10,6 +10,7 @@ const mockData = {
   image: 'https://s3.amazonaws.com/FringeBucket/image_placeholder.png',
   name: 'Org Test Name',
   memberCount: 100,
+  description: 'description of the lizard org',
 };
 
 export const QuroumDemo = () => {
