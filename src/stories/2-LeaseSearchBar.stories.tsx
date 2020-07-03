@@ -8,7 +8,5 @@ export default {
 };
 
 export const QuroumDemo = () => {
-  return (
-    <LeaseSearchBar/>
-  )
-}
+  return <LeaseSearchBar />;
+};
