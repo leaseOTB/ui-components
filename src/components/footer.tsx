@@ -56,7 +56,7 @@ export const Footer = (props: any) => {
     <footer className={classes.footer}>
       <div className={classes.main}>
         <List className={classes.sitemap}>
-          {props.props.map((data) => {
+          {props.props.map((data: any) => {
             return <Column title={data.title} items={data.items} />;
           })}
           <div className={classes.bottomFooter}>
