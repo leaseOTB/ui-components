@@ -9,27 +9,33 @@ export default {
 
 const mockData = [
   {
-    title: 'Column 1',
+    title: 'About',
     items: [
       { item: 'item 1', link: 'https://leaseontheblock.care' },
       { item: 'item 2', link: 'https://google.com' },
     ],
   },
   {
-    title: 'Column 2',
+    title: 'Software',
     items: [
       { item: 'item 1', link: 'https://leaseontheblock.care' },
       { item: 'item 2', link: 'https://google.com' },
     ],
   },
   {
-    title: 'Column 3',
-    items: [{ item: 'item 1', link: 'https://leaseontheblock.care' }],
+    title: 'Developers',
+    items: [
+      { item: 'item 1', link: 'https://leaseontheblock.care' },
+      { item: 'item 2', link: 'https://google.com' },
+    ]
   },
   {
-    title: 'Column 4',
-    items: [{ item: 'item 1', link: 'https://leaseontheblock.care' }],
-  },
+    title: 'Community',
+    items: [
+      { item: 'item 1', link: 'https://leaseontheblock.care' },
+      { item: 'item 2', link: 'https://google.com' },
+    ],
+  }
 ];
 
 export const QuroumDemo = () => {

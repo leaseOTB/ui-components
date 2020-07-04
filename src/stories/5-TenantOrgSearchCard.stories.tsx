@@ -1,5 +1,6 @@
 import React from 'react';
 import { TenantOrgCard } from '../components/tenantOrgSearchCard';
+import {Grid} from '@material-ui/core'
 
 export default {
   title: 'TenantOrgCard',
@@ -14,5 +15,17 @@ const mockData = {
 };
 
 export const QuroumDemo = () => {
-  return <TenantOrgCard props={mockData} />;
+  return  (
+    <Grid container direction='row' spacing={9}>
+      <Grid item xs={4}>
+        <TenantOrgCard props={mockData} />
+      </Grid>
+      <Grid item xs={4}>
+        <TenantOrgCard props={mockData} />
+      </Grid>
+      <Grid item xs={4}>
+        <TenantOrgCard props={mockData} />
+      </Grid>
+    </Grid>
+  )
 };
